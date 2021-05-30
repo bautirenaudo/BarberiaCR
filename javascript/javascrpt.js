@@ -20,6 +20,7 @@
       window.location="https://www.instagram.com/barberiaclaudiorenaudo/";
     }
 
+
     //EVENTOS  
     menu.addEventListener("click",abrir);
     menu2.addEventListener("click",cerrar);
