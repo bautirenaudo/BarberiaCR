@@ -237,7 +237,7 @@ body{
             position: fixed;
             width: 100%;
             height: 100%;
-            filter: blur(10px);
+            filter: blur(5px);
             transform: scale(1);
             animation: borroso 5s ;
             z-index: -100;
@@ -248,7 +248,7 @@ body{
               transform: scale(1.5);
             }
             to{
-                filter: blur(10px);
+                filter: blur(5px);
                 transform: scale(1);
             }
         }
