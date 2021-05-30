@@ -138,6 +138,7 @@ body{
     height: 320px;
     overflow: hidden;   
     border-radius: 50%;
+    border: 8px double rgb(97, 99, 11);
 
     animation: girar 20s  infinite;
 }
@@ -161,7 +162,10 @@ body{
     cursor: pointer;
 }
 #divLogo img:hover{
-    transform: scale(1.4);
+    transform: scale(1.35);
+}
+#divLogo img:hover > #divLogo{
+    border: 5px solid rgb(97, 99, 11);   
 }
 
 
@@ -199,7 +203,7 @@ body{
 }
 
 #nombre h1{
-    color: #fff;
+    color: #fffefedc;
     font-size: 80px;
     font-weight: lighter;
     font-family: u;
