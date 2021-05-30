@@ -46,7 +46,7 @@ body{
 #header2{
     display: none;
 }
-.icon-menu{
+.icon-circle-right, .icon-circle-left{
     display: none;
 }
 #header1{
@@ -258,20 +258,37 @@ body{
         #header1{
             display: none;
         }
-        .icon-menu{
+        .icon-circle-right, .icon-circle-left{
             display: block;
             position: absolute;
             z-index: 300;
-            right: 10px;
-            top: 20px;
-            font-size: 70px;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
             color: #fff;
         }
+        .icon-circle-right{
+
+        }
+        .icon-circle-left{
+            display: none;
+        }
+        @keyframes menu {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+
         #header2{
             display: block;
         }
         #header2 nav{
-            display: flex;
+            display: block;
             justify-content: center;
             position: absolute;
             transform: translateX(-100%);
@@ -282,13 +299,14 @@ body{
             background: linear-gradient(rgba(0, 0, 0, 0.952) 50%, rgba(255, 255, 255, 0.952) 300%);
         }
         #header2 nav ul{
-            display: grid;
+            display: block;
             align-items: center;
-            margin: 10px 0;
+            margin: 60px 0;
         }
         #header2 nav ul li{ 
             list-style: none;
             display: block;
+            margin-bottom: 80px;
             text-align: center;
             transition:  all .2s;
             padding: 2px;
@@ -381,6 +399,7 @@ body{
         #parteDeAbajo{
             display: block;
             height: 100%;
+            margin-top: 50px;
             box-shadow: 0 0 30px 20px rgb(0, 0, 0) ;
             background-color: #09360038;
         
@@ -396,7 +415,7 @@ body{
         }
         
         #nombre{
-            display: block;
+            display: none;
             text-align: center;
             margin-top: 50px;
             animation: nombre 2s;
@@ -419,7 +438,7 @@ body{
         
         /*DESDE*/
         #desde{
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
             margin-top: 70px;
