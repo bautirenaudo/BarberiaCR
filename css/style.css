@@ -42,17 +42,22 @@ body{
     object-fit: cover;
 }
 
-/*HEADER 1*/
+/*HEADER*/
+#header2{
+    display: none;
+}
 .icon-menu{
     display: none;
 }
 #header1{
     display: block;
+
 }
 #header1 nav{
     display: flex;
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.829), rgba(255, 255, 255, 0.24));
+    transform: translateX(0%);
 }
 #header1 nav ul{
     display: flex;
@@ -221,7 +226,7 @@ body{
 
 
 
-     @media screen and (max-width:750px){
+    @media screen and (max-width:750px){
         /*FONDO*/
         #fondo{
             display: block;
@@ -249,7 +254,10 @@ body{
             object-fit: cover;
         }
         
-        /*HEADER 1*/
+        /*HEADER*/
+        #header1{
+            display: none;
+        }
         .icon-menu{
             display: block;
             position: absolute;
@@ -259,10 +267,10 @@ body{
             font-size: 70px;
             color: #fff;
         }
-        #header1{
+        #header2{
             display: block;
         }
-        #header1 nav{
+        #header2 nav{
             display: flex;
             justify-content: center;
             position: absolute;
@@ -273,26 +281,26 @@ body{
             height: 100%;
             background: linear-gradient(rgba(0, 0, 0, 0.952) 50%, rgba(255, 255, 255, 0.952) 300%);
         }
-        #header1 nav ul{
+        #header2 nav ul{
             display: grid;
             align-items: center;
             margin: 10px 0;
         }
-        #header1 nav ul li{ 
+        #header2 nav ul li{ 
             list-style: none;
             display: block;
             text-align: center;
             transition:  all .2s;
             padding: 2px;
         }
-        #header1 nav ul li:hover{
+        #header2 nav ul li:hover{
             transform: scale(1.15);
             transition: all .5s;
         }
-        #header1 #turnos{
+        #header2 #turnos2{
             color: rgb(180, 154, 2);
         }
-        #header1 nav ul li a{
+        #header2 nav ul li a{
             color: rgb(255, 255, 255);
             font-family: 'Montserrat', sans-serif;
             font-size: 20px;
@@ -311,7 +319,7 @@ body{
             }
         }
         
-        #header1 nav ul .lineaSeparadora{
+        #header2 nav ul .lineaSeparadora{
             display: none;
             width: 1px;
             height: 40px;
@@ -319,7 +327,7 @@ body{
             margin: 0 40px;
             
         }
-        #header1 nav #linea{
+        #header2 nav #linea{
             display: none;
             position: absolute;
             margin-top: 70px;
@@ -327,19 +335,9 @@ body{
             height: 3px;
             background-color: rgb(122, 104, 3);
         
-            animation: linea .5s linear;
+            animation: linea .5s linear;     
+        }
         
-        }
-        @keyframes linea{
-            from{
-               width: 0;
-               left: 0;
-            }
-            to{
-                left: 0;
-                width: 100%;
-            }
-        }
         
         
         /*LOGO*/
@@ -437,4 +435,4 @@ body{
             font-family: 'Noto Sans JP', sans-serif;
             
         } 
-     }
+    }
