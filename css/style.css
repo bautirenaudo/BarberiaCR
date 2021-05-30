@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+body{
+
+}
+#contenedor{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/*FONDO*/
+#fondo{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    transform: scale(1);
+    animation: borroso 5s ;
+    z-index: -100;
+}
+@keyframes borroso{
+    from{
+      filter: blur(2px);
+      transform: scale(1.5);
+    }
+    to{
+        filter: blur(10px);
+        transform: scale(1);
+    }
+}
+#fondo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*HEADER 1*/
+.icon-menu{
+    display: none;
+}
+#header1{
+    display: block;
+}
+#header1 nav{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.829), rgba(255, 255, 255, 0.24));
+}
+#header1 nav ul{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+#header1 nav ul li{ 
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    transition:  all .2s;
+    padding: 2px;
+}
+#header1 nav ul li:hover{
+    transform: scale(1.15);
+    transition: all .5s;
+}
+#header1 #turnos{
+    color: rgb(180, 154, 2);
+}
+#header1 nav ul li a{
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;  
+    padding: 10px;  transition: all .05s;
+
+    animation: aparecer 3s linear;
+}
+@keyframes aparecer {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+}
+
+#header1 nav ul .lineaSeparadora{
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    background-color: rgb(73, 73, 73);
+    margin: 0 40px;
+    
+}
+#header1 nav #linea{
+    display: block;
+    position: absolute;
+    margin-top: 70px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(122, 104, 3);
+
+    animation: linea .5s linear;
+
+}
+@keyframes linea{
+    from{
+       width: 0;
+       left: 0;
+    }
+    to{
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+/*LOGO*/
+#divLogo{
+    display: grid;
+    place-content: center;
+    margin: auto;
+    margin-top: 40px;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;   
+    border-radius: 50%;
+
+    animation: girar 20s  infinite;
+}
+@keyframes girar {
+    from{
+       transform: rotate(0deg);
+    }
+    5%{
+        transform: rotate(-360deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+#divLogo img{
+    width: 300px;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: all .7s;
+    cursor: pointer;
+}
+#divLogo img:hover{
+    transform: scale(1.4);
+}
+
+
+/*NOMBRE*/
+#parteDeAbajo{
+    display: block;
+    height: 100%;
+    box-shadow: 0 0 30px 20px rgb(0, 0, 0) ;
+    background-color: #09360054;
+
+    animation: verde 5s ;
+}
+@keyframes verde {
+    from{
+        background-color: #051d00de;
+    }
+    to{
+        background-color: #09360054;
+    }
+}
+
+#nombre{
+    display: block;
+    text-align: center;
+    margin-top: 120px;
+    animation: nombre 2s;
+}
+@keyframes nombre {
+    from{
+        transform: scale(.5) translateX(-150%);
+    }
+    to{  
+        transform: scale(1) translateXY(0%);
+    }
+}
+
+#nombre h1{
+    color: #fff;
+    font-size: 80px;
+    font-weight: lighter;
+    font-family: u;
+}
+
+/*DESDE*/
+#desde{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+#desde img{
+    display: inline-block;
+    width: 40px;
+}
+
+#desde h3{
+    display: inline-block;
+    color: #FABC41;
+    font-family: 'Noto Sans JP', sans-serif;
+    
+}
+
+
+
+     @media screen and (max-width:750px){
+        /*FONDO*/
+        #fondo{
+            display: block;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            filter: blur(10px);
+            transform: scale(1);
+            animation: borroso 5s ;
+            z-index: -100;
+        }
+        @keyframes borroso{
+            from{
+              filter: blur(2px);
+              transform: scale(1.5);
+            }
+            to{
+                filter: blur(10px);
+                transform: scale(1);
+            }
+        }
+        #fondo img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /*HEADER 1*/
+        .icon-menu{
+            display: block;
+            position: absolute;
+            z-index: 300;
+            right: 10px;
+            top: 20px;
+            font-size: 70px;
+            color: #fff;
+        }
+        #header1{
+            display: block;
+        }
+        #header1 nav{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            transform: translateX(-100%);
+            transition: all .3s;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.952) 50%, rgba(255, 255, 255, 0.952) 300%);
+        }
+        #header1 nav ul{
+            display: grid;
+            align-items: center;
+            margin: 10px 0;
+        }
+        #header1 nav ul li{ 
+            list-style: none;
+            display: block;
+            text-align: center;
+            transition:  all .2s;
+            padding: 2px;
+        }
+        #header1 nav ul li:hover{
+            transform: scale(1.15);
+            transition: all .5s;
+        }
+        #header1 #turnos{
+            color: rgb(180, 154, 2);
+        }
+        #header1 nav ul li a{
+            color: rgb(255, 255, 255);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;  
+            padding: 10px;  transition: all .05s;
+        
+            animation: aparecer 3s linear;
+        }
+        @keyframes aparecer {
+            from{
+              opacity: 0;
+            }
+            to{
+              opacity: 1;
+            }
+        }
+        
+        #header1 nav ul .lineaSeparadora{
+            display: none;
+            width: 1px;
+            height: 40px;
+            background-color: rgb(73, 73, 73);
+            margin: 0 40px;
+            
+        }
+        #header1 nav #linea{
+            display: none;
+            position: absolute;
+            margin-top: 70px;
+            width: 100%;
+            height: 3px;
+            background-color: rgb(122, 104, 3);
+        
+            animation: linea .5s linear;
+        
+        }
+        @keyframes linea{
+            from{
+               width: 0;
+               left: 0;
+            }
+            to{
+                left: 0;
+                width: 100%;
+            }
+        }
+        
+        
+        /*LOGO*/
+        #divLogo{
+            display: grid;
+            place-content: center;
+            margin: auto;
+            margin-top: 40px;
+            width: 320px;
+            height: 320px;
+            overflow: hidden;   
+            border-radius: 50%;
+        
+            animation: girar 20s  infinite;
+        }
+        @keyframes girar {
+            from{
+               transform: rotate(0deg);
+            }
+            5%{
+                transform: rotate(-360deg);
+            }
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+        
+        #divLogo img{
+            width: 300px;
+            border-radius: 100px;
+            object-fit: cover;
+            transition: all .7s;
+            cursor: pointer;
+        }
+        #divLogo img:hover{
+            transform: scale(1.4);
+        }
+        
+        
+        /*NOMBRE*/
+        #parteDeAbajo{
+            display: block;
+            height: 100%;
+            box-shadow: 0 0 30px 20px rgb(0, 0, 0) ;
+            background-color: #09360038;
+        
+            animation: verde 5s ;
+        }
+        @keyframes verde {
+            from{
+                background-color: #051d00de;
+            }
+            to{
+                background-color: #09360038;
+            }
+        }
+        
+        #nombre{
+            display: block;
+            text-align: center;
+            margin-top: 120px;
+            animation: nombre 2s;
+        }
+        @keyframes nombre {
+            from{
+                transform: scale(.5) translateX(-150%);
+            }
+            to{  
+                transform: scale(1) translateXY(0%);
+            }
+        }
+        
+        #nombre h1{
+            color: #fff;
+            font-size: 80px;
+            font-weight: lighter;
+            font-family: u;
+        }
+        
+        /*DESDE*/
+        #desde{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 70px;
+        }
+        #desde img{
+            display: inline-block;
+            width: 40px;
+        }
+        
+        #desde h3{
+            display: inline-block;
+            color: #FABC41;
+            font-family: 'Noto Sans JP', sans-serif;
+            
+        } 
+     }
